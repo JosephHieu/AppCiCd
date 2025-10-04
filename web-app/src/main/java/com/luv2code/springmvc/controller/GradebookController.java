@@ -57,6 +57,7 @@ public class GradebookController {
 			return "error";
 		}
 
+
 		studentService.configureStudentInformationModel(id, m);
 
 		return "studentInformation";
