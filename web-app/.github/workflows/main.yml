@@ -7,8 +7,9 @@ on:
 
 jobs:
   build-deploy:
-    name: Build and Deploy Spring boot for beginner
+    name: Build and Deploy Spring Boot App
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -23,6 +24,6 @@ jobs:
         run: mvn -B test --file pom.xml
 
       - name: Build the application
-        run:
+        run: |
           mvn clean
           mvn -B package --file pom.xml
